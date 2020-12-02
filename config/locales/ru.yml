@@ -187,7 +187,7 @@ ru:
         no_found: Нет категорий для опцийW
     users:
       edit:
-        title: Участие пользователя в группах доступа
+        title: Информация пользователя
       index:
         access_state: Статус
         cluster_access_state_present: Только с доступом на кластеры
@@ -204,7 +204,7 @@ ru:
         block_user: Заблокировать доступ
         days_short: дн.
         delete_user: Удалить аккаунт пользователя
-        edit_groups_involvement: Редактировать участие в группах
+        edit_groups_involvement: Редактировать информацию пользователя
         login_as_user: Зайти под аккаунтом пользователя
         none: нет
         present: есть

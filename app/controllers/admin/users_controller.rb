@@ -30,6 +30,7 @@ class Admin::UsersController < Admin::ApplicationController
 
   def edit
     @user = User.find(params[:id])
+    @profile = @user.profile
   end
 
   def update
@@ -80,7 +81,7 @@ private
   end
 
   def user_params
-    params.require(:user).permit(group_ids: [])
+    params.require(:user).permit(:email, profile_attributes: [:first_name, :middle_name, :last_name], group_ids: [])
   end
 
   def setup_default_filter

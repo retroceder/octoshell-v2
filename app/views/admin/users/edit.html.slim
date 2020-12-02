@@ -2,6 +2,11 @@ div class="page-header"
   h1 = t(".title", default: "Edit User")
 
 = bootstrap_form_for [:admin, @user], layout: :horizontal do |f|
+  = f.fields_for :profile, @user.profile do |p|
+    = p.text_field :first_name
+    = p.text_field :middle_name
+    = p.text_field :last_name
+  = f.text_field :email
   = f.collection_check_boxes :group_ids, Group.all, :id, :name
   = f.form_group do
     = f.submit t("buttons.save")
